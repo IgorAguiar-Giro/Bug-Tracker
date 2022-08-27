@@ -17,7 +17,10 @@ initializePassport(
   id => users.find(user => user.id === id)
 )
 
+app.use('/public', express.static('public'));
+
 const users = []
+
 
 app.set('view-engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
